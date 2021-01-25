@@ -1,0 +1,165 @@
+@mixin damageAnimation {
+  left: 100px;
+  color: #fff;
+  font-size: 25px;
+  width: 30%;
+  margin-top: -150px !important;
+  opacity: 0;
+  border: none;
+}
+@mixin lifeBar {
+  height: 20px;
+  width: 200px;
+  background-color: #e60000;
+}
+@mixin innerLifeBar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+@mixin deadStateBanner {
+  color: #fff;
+  width: 200px;
+  font-size: 25px;
+  position: absolute;
+  background-color: red;
+  padding: 5px 0 2px 0;
+  animation: deadStateBanner 3s ease;
+  @keyframes deadStateBanner {
+    0% {
+      transform: scale(0) rotate(0deg);
+    }
+    50% {
+      transform: scale(0) rotate(0deg);
+    }
+    100% {
+      transform: scale(1) rotate(360deg);
+    }
+  }
+}
+.game {
+  display: flex;
+  min-height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  .fractalMonster {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 25px;
+    .monsterAvatar {
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .monsterLifebar {
+      @include lifeBar;
+    }
+    .innerMonsterLifebar {
+      @include innerLifeBar;
+    }
+    .playerAttackAmount {
+      @include damageAnimation;
+    }
+    .deadStateBannerMonster {
+      @include deadStateBanner;
+    }
+    p {
+      margin-top: -17px;
+      color: #fff;
+    }
+  }
+  .player {
+    width: 200px;
+    height: 200px;
+    text-align: center;
+    margin: 45px;
+    .playerAvatar {
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .playerLifebar {
+      @include lifeBar;
+    }
+    .innerPlayerLifebar {
+      @include innerLifeBar;
+    }
+    .monsterAttackAmount {
+      @include damageAnimation;
+    }
+    .deadStateBannerPlayer {
+      @include deadStateBanner;
+    }
+    p {
+      margin-top: -17px;
+      color: #fff;
+    }
+  }
+  .displayNone {
+    display: none;
+  }
+  .displayEndButton {
+    animation: 4s endButton ease-in-out;
+    @keyframes endButton {
+      0% {
+        opacity: 0;
+      }
+      60% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+  }
+  .playerDefeated {
+    text-align: center;
+  }
+  .backBlue {
+    background-color: cadetblue;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .backRed {
+    background-color: red;
+    /*padding-top: 2px;*/
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  .opacityNone {
+    opacity: 0;
+    width: 0;
+    height: 0;
+    transform: scale(0);
+  }
+  .defeated {
+    animation: defeated 1s ease-in-out;
+    filter: grayscale(100%);
+    @keyframes defeated {
+      0% {
+        filter: grayscale(0);
+      }
+      100% {
+        filter: grayscale(100%);
+      }
+    }
+  }
+  .addDamageAnimation {
+    animation-name: attackAnimation;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+    @keyframes attackAnimation {
+      0% {
+        opacity: 1;
+      }
+      10% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
+    }
+  }
+}
