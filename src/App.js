@@ -7,6 +7,8 @@ import EndGame from "./components/EndGame";
 import PlayerSkills from "./components/PlayerSkills";
 import NextStage from "./components/NextStage";
 
+//test
+
 function App() {
   return (
     <Router>
