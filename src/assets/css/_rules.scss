@@ -1,0 +1,85 @@
+@mixin btn {
+  width: 800px;
+  background-color: $secondaryColor;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px 0;
+  border: 1px solid #666666;
+  cursor: pointer;
+}
+.rules {
+  color: $textMainColor;
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  .rules-box {
+    padding: 100px;
+    width: 100%;
+    img {
+      width: 150px;
+    }
+    p {
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 45px;
+    }
+    button {
+      margin-top: 50px;
+      box-shadow: none;
+      padding: 10px 40px;
+      font-family: "lexendMegaregular";
+      border-radius: 0;
+      background-color: $mainColor;
+      color: #fff;
+      border: 2px solid $textMainColor;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 2s;
+    }
+    button:hover,
+    button:focus {
+      background-color: $textMainColor;
+      border: 2px solid $textMainColor;
+      color: #000;
+      transition: 2s;
+    }
+    .rules-accordeon {
+      width: 800px;
+      margin: auto;
+    }
+    .btn-rules,
+    .btn-skills,
+    .btn-about {
+      @include btn;
+      span {
+        float: right;
+        padding-right: 15px;
+      }
+      p {
+        text-align: left;
+      }
+    }
+    .btn-open {
+      background-color: $secondaryColor;
+    }
+    .rules-text {
+      text-align: left;
+      line-height: 3;
+      font-size: 15px;
+      background-color: $secondaryColor;
+      padding: 20px;
+      border: 1px solid #666666;
+    }
+    strong {
+      text-transform: uppercase;
+    }
+  }
+}

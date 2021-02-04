@@ -10,7 +10,7 @@ function NextStage() {
   useEffect(() => {
     const timer = setTimeout(() => {
       history.push("/game");
-    }, 5000);
+    }, 3000);
     return () => clearTimeout(timer);
   }, []);
 

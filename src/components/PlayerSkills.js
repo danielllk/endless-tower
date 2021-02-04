@@ -28,9 +28,9 @@ function PlayerSkills() {
     "speed",
     localStorage.getItem("speed")
   );
-  const [playerAccuracity, setPlayerAccuracity] = PlayerAttributesStorage(
-    "accuracity",
-    localStorage.getItem("accuracity")
+  const [playerAccuracy, setPlayerAccuracy] = PlayerAttributesStorage(
+    "Accuracy",
+    localStorage.getItem("Accuracy")
   );
   const [playerArmor, setPlayerArmor] = PlayerAttributesStorage(
     "armor",
@@ -54,10 +54,28 @@ function PlayerSkills() {
     }
   };
 
+  const handleAttackReturn = () => {
+    if (availableSkills < 3 && availableSkills >= 0) {
+      if (playerAttack > 2) {
+        setPlayerAttack(parseInt(playerAttack) - 1);
+        setAvailableSkills(parseInt(availableSkills) + 1);
+      }
+    }
+  };
+
   const handleLife = () => {
     if (availableSkills > 0) {
       setPlayerVitality(parseInt(playerVitality) + 1);
       setAvailableSkills(parseInt(availableSkills) - 1);
+    }
+  };
+
+  const handleLifeReturn = () => {
+    if (availableSkills < 3 && availableSkills >= 0) {
+      if (playerVitality > 10) {
+        setPlayerVitality(parseInt(playerVitality) - 1);
+        setAvailableSkills(parseInt(availableSkills) + 1);
+      }
     }
   };
 
@@ -69,6 +87,16 @@ function PlayerSkills() {
     }
   };
 
+  const handleAgilityReturn = () => {
+    if (availableSkills < 3 && availableSkills >= 0) {
+      if (playerAgility > 0) {
+        setPlayerAgility(parseInt(playerAgility) - 1);
+        setPlayerDodge(parseInt(playerDodge) - 1);
+        setAvailableSkills(parseInt(availableSkills) + 1);
+      }
+    }
+  };
+
   const handleSpeed = () => {
     if (availableSkills > 0) {
       setPlayerSpeed(parseInt(playerSpeed) + 1);
@@ -77,10 +105,29 @@ function PlayerSkills() {
     }
   };
 
-  const handleAccuracity = () => {
+  const handleSpeedReturn = () => {
+    if (availableSkills <= 3 && availableSkills >= 0) {
+      if (playerSpeed > 10) {
+        setPlayerSpeed(parseInt(playerSpeed) - 1);
+        setPlayerRawSpeed(parseInt(playerRawSpeed) + 20);
+        setAvailableSkills(parseInt(availableSkills) + 1);
+      }
+    }
+  };
+
+  const handleAccuracy = () => {
     if (availableSkills > 0) {
-      setPlayerAccuracity(parseInt(playerAccuracity) + 1);
+      setPlayerAccuracy(parseInt(playerAccuracy) + 1);
       setAvailableSkills(parseInt(availableSkills) - 1);
+    }
+  };
+
+  const handleAccuracyReturn = () => {
+    if (availableSkills < 3 && availableSkills >= 0) {
+      if (playerAccuracy > 0) {
+        setPlayerAccuracy(parseInt(playerAccuracy) - 1);
+        setAvailableSkills(parseInt(availableSkills) + 1);
+      }
     }
   };
 
@@ -91,11 +138,20 @@ function PlayerSkills() {
     }
   };
 
+  const handleArmorReturn = () => {
+    if (availableSkills < 3 && availableSkills >= 0) {
+      if (playerArmor > 0) {
+        setPlayerArmor(parseInt(playerArmor) - 1);
+        setAvailableSkills(parseInt(availableSkills) + 1);
+      }
+    }
+  };
+
   const goNextStage = () => {
     setMonsterLvl(parseInt(monsterLvl) + 1);
     setTimeout(() => {
       history.push("/nextstage");
-    }, 1000);
+    }, 100);
   };
 
   return (
@@ -107,31 +163,37 @@ function PlayerSkills() {
           <div>
             <span>Strength: </span>
             <span> {playerAttack}</span>
+            <button onClick={() => handleAttackReturn()}>-</button>
             <button onClick={() => handleAttack()}>+</button>
           </div>
           <div>
             <span>Vitality: </span>
             <span>{playerVitality}</span>
+            <button onClick={() => handleLifeReturn()}>-</button>
             <button onClick={() => handleLife()}>+</button>
           </div>
           <div>
             <span>Agility: </span>
             <span>{playerAgility}</span>
+            <button onClick={() => handleAgilityReturn()}>-</button>
             <button onClick={() => handleAgility()}>+</button>
           </div>
           <div>
             <span>Speed: </span>
             <span> {playerSpeed}</span>
+            <button onClick={() => handleSpeedReturn()}>-</button>
             <button onClick={() => handleSpeed()}>+</button>
           </div>
           <div>
-            <span>Accuracity: </span>
-            <span>{playerAccuracity}</span>
-            <button onClick={() => handleAccuracity()}>+</button>
+            <span>Accuracy: </span>
+            <span>{playerAccuracy}</span>
+            <button onClick={() => handleAccuracyReturn()}>-</button>
+            <button onClick={() => handleAccuracy()}>+</button>
           </div>
           <div>
             <span>Armor: </span>
             <span>{playerArmor}</span>
+            <button onClick={() => handleArmorReturn()}>-</button>
             <button onClick={() => handleArmor()}>+</button>
           </div>
           <button onClick={() => goNextStage()}>next stage</button>

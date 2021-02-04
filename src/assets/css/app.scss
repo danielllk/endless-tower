@@ -1,5 +1,12 @@
+@import "./globalSettings", "./intro", "./game", "./playerSkills", "./nextStage",
+  "./fonts", "./rules";
 body {
-  background-color: #eee;
+  background-color: $mainColor;
   font-family: "lexendMegaregular";
+  .display-none {
+    display: none;
+  }
+  a {
+    color: #000;
+  }
 }
-@import "./game", "./playerSkills", "./nextStage", "./fonts";

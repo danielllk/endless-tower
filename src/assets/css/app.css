@@ -1,0 +1,528 @@
+.intro {
+  color: #d9d9d9;
+  background-image: url("../img/backgroundImg/rsz_artemis.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.intro div {
+  background-color: rgba(26, 26, 26, 0.9);
+  padding: 100px;
+  width: 100%;
+}
+
+.intro div img {
+  width: 150px;
+}
+
+.intro div h1 {
+  text-transform: uppercase;
+  font-size: 45px;
+}
+
+.intro div button {
+  margin-top: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 10px 40px;
+  font-family: "lexendMegaregular";
+  border-radius: 0;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.intro div button:hover,
+.intro div button:focus {
+  background-color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  color: #000;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.game {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  min-height: 100vh;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #d9d9d9;
+}
+
+.game .fractalMonster {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 25px;
+}
+
+.game .fractalMonster .monsterAvatar {
+  height: 100%;
+}
+
+.game .fractalMonster .monsterAvatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.game .fractalMonster .monsterLifebar {
+  height: 20px;
+  width: 200px;
+  background-color: #cc0000;
+}
+
+.game .fractalMonster .innerMonsterLifebar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game .fractalMonster .playerAttackAmount {
+  left: 100px;
+  color: #fff;
+  font-size: 25px;
+  width: 30%;
+  margin-top: -150px !important;
+  opacity: 0;
+  border: none;
+}
+
+.game .fractalMonster .deadStateBannerMonster {
+  color: #fff;
+  width: 200px;
+  font-size: 25px;
+  position: absolute;
+  background-color: #cc0000;
+  padding: 5px 0 2px 0;
+  -webkit-animation: deadStateBanner 3s ease;
+          animation: deadStateBanner 3s ease;
+}
+
+@-webkit-keyframes deadStateBanner {
+  0% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+@keyframes deadStateBanner {
+  0% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+.game .fractalMonster p {
+  margin-top: -17px;
+  color: #fff;
+}
+
+.game .player {
+  width: 200px;
+  height: 200px;
+  text-align: center;
+  margin: 45px;
+}
+
+.game .player .playerAvatar {
+  height: 100%;
+}
+
+.game .player .playerAvatar img {
+  width: 100%;
+  height: 100%;
+}
+
+.game .player .playerLifebar {
+  height: 20px;
+  width: 200px;
+  background-color: #cc0000;
+}
+
+.game .player .innerPlayerLifebar {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.game .player .monsterAttackAmount {
+  left: 100px;
+  color: #fff;
+  font-size: 25px;
+  width: 30%;
+  margin-top: -150px !important;
+  opacity: 0;
+  border: none;
+}
+
+.game .player .deadStateBannerPlayer {
+  color: #fff;
+  width: 200px;
+  font-size: 25px;
+  position: absolute;
+  background-color: #cc0000;
+  padding: 5px 0 2px 0;
+  -webkit-animation: deadStateBanner 3s ease;
+          animation: deadStateBanner 3s ease;
+}
+
+@keyframes deadStateBanner {
+  0% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+  50% {
+    -webkit-transform: scale(0) rotate(0deg);
+            transform: scale(0) rotate(0deg);
+  }
+  100% {
+    -webkit-transform: scale(1) rotate(360deg);
+            transform: scale(1) rotate(360deg);
+  }
+}
+
+.game .player p {
+  margin-top: -17px;
+  color: #fff;
+}
+
+.game .displayNone {
+  display: none;
+}
+
+.game .displayEndButton {
+  -webkit-animation: 4s endButton ease-in-out;
+          animation: 4s endButton ease-in-out;
+}
+
+@-webkit-keyframes endButton {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes endButton {
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.game .playerDefeated {
+  text-align: center;
+}
+
+.game .playerDefeated .victory {
+  font-size: 35px;
+  font-family: "lexendMegaregular";
+  color: #cc0000;
+  text-transform: uppercase;
+}
+
+.game .playerDefeated button {
+  padding: 10px 40px;
+  font-family: "lexendMegaregular";
+  border-radius: 0;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.game .playerDefeated button:hover,
+.game .playerDefeated button:focus {
+  background-color: #cc0000;
+  border: 2px solid #d9d9d9;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.game .backBlue {
+  background-color: cadetblue;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game .backRed {
+  background-color: #cc0000;
+  /*padding-top: 2px;*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.game .opacityNone {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.game .defeated {
+  -webkit-animation: defeated 1s ease-in-out;
+          animation: defeated 1s ease-in-out;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+@-webkit-keyframes defeated {
+  0% {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+  100% {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+}
+
+@keyframes defeated {
+  0% {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+  }
+  100% {
+    -webkit-filter: grayscale(100%);
+            filter: grayscale(100%);
+  }
+}
+
+.game .addDamageAnimation {
+  -webkit-animation-name: attackAnimation;
+          animation-name: attackAnimation;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+}
+
+@-webkit-keyframes attackAnimation {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+@keyframes attackAnimation {
+  0% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.PlayerSkills {
+  background-color: red;
+  height: 100vh;
+  display: -ms-grid;
+  display: grid;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.NextStage {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.NextStage p {
+  font-size: 150px;
+  text-transform: uppercase;
+}
+
+@font-face {
+  font-family: "lexendMegaregular";
+  src: url("../fonts/lexendmega-regular-webfont.woff2") format("woff2"), url("../fonts/lexendmega-regular-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.rules {
+  color: #d9d9d9;
+  background-color: #1a1a1a;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.rules .rules-box {
+  padding: 100px;
+  width: 100%;
+}
+
+.rules .rules-box img {
+  width: 150px;
+}
+
+.rules .rules-box h1 {
+  text-transform: uppercase;
+  font-size: 45px;
+}
+
+.rules .rules-box button {
+  margin-top: 50px;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  padding: 10px 40px;
+  font-family: "lexendMegaregular";
+  border-radius: 0;
+  background-color: #1a1a1a;
+  color: #fff;
+  border: 2px solid #d9d9d9;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.rules .rules-box button:hover,
+.rules .rules-box button:focus {
+  background-color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  color: #000;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.rules .rules-box .rules-accordeon {
+  width: 800px;
+  margin: auto;
+}
+
+.rules .rules-box .btn-rules,
+.rules .rules-box .btn-skills,
+.rules .rules-box .btn-about {
+  width: 800px;
+  background-color: #404040;
+  margin: auto;
+  margin-top: 10px;
+  padding: 15px 0;
+  border: 1px solid #666666;
+  cursor: pointer;
+}
+
+.rules .rules-box .btn-rules span,
+.rules .rules-box .btn-skills span,
+.rules .rules-box .btn-about span {
+  float: right;
+  padding-right: 15px;
+}
+
+.rules .rules-box .btn-rules p,
+.rules .rules-box .btn-skills p,
+.rules .rules-box .btn-about p {
+  text-align: left;
+}
+
+.rules .rules-box .btn-open {
+  background-color: #404040;
+}
+
+.rules .rules-box .rules-text {
+  text-align: left;
+  line-height: 3;
+  font-size: 15px;
+  background-color: #404040;
+  padding: 20px;
+  border: 1px solid #666666;
+}
+
+.rules .rules-box strong {
+  text-transform: uppercase;
+}
+
+body {
+  background-color: #1a1a1a;
+  font-family: "lexendMegaregular";
+}
+
+body .display-none {
+  display: none;
+}
+
+body a {
+  color: #000;
+}
+/*# sourceMappingURL=app.css.map */

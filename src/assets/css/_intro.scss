@@ -1,0 +1,47 @@
+.intro {
+  color: $textMainColor;
+  background-image: url("../img/backgroundImg/rsz_artemis.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+
+  div {
+    background-color: rgba(26, 26, 26, 0.9);
+    padding: 100px;
+    width: 100%;
+    img {
+      width: 150px;
+    }
+    p {
+    }
+    h1 {
+      text-transform: uppercase;
+      font-size: 45px;
+    }
+    button {
+      margin-top: 50px;
+      box-shadow: none;
+      padding: 10px 40px;
+      font-family: "lexendMegaregular";
+      border-radius: 0;
+      background-color: #1a1a1a;
+      color: $textMainColor;
+      border: 2px solid $textMainColor;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 2s;
+    }
+    button:hover,
+    button:focus {
+      background-color: $textMainColor;
+      border: 2px solid $textMainColor;
+      color: #000;
+      transition: 2s;
+    }
+  }
+}

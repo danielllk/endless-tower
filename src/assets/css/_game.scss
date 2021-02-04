@@ -10,7 +10,7 @@
 @mixin lifeBar {
   height: 20px;
   width: 200px;
-  background-color: #e60000;
+  background-color: $darkRed;
 }
 @mixin innerLifeBar {
   background-color: rgba(0, 0, 0, 0.5);
@@ -20,7 +20,7 @@
   width: 200px;
   font-size: 25px;
   position: absolute;
-  background-color: red;
+  background-color: $darkRed;
   padding: 5px 0 2px 0;
   animation: deadStateBanner 3s ease;
   @keyframes deadStateBanner {
@@ -41,6 +41,7 @@
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  background-color: $textMainColor;
   .fractalMonster {
     width: 200px;
     height: 200px;
@@ -69,12 +70,36 @@
       margin-top: -17px;
       color: #fff;
     }
+    .monsterName {
+      padding: 5px;
+      text-transform: uppercase;
+    }
+  }
+  .startButton {
+    margin-top: 20px;
+    button {
+      padding: 10px 40px;
+      font-family: "lexendMegaregular";
+      border-radius: 0;
+      background-color: #1a1a1a;
+      color: $textMainColor;
+      border: 2px solid $textMainColor;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 2s;
+    }
+    button:hover,
+    button:focus {
+      background-color: $mainColor;
+      border: 2px solid $textMainColor;
+      transition: 2s;
+    }
   }
   .player {
     width: 200px;
     height: 200px;
     text-align: center;
-    margin: 45px;
+    margin: 0px 45px 45px 45px;
     .playerAvatar {
       height: 100%;
       img {
@@ -118,13 +143,36 @@
   }
   .playerDefeated {
     text-align: center;
+    .victory {
+      /*font-size: 35px;*/
+      font-family: "lexendMegaregular";
+      color: $darkRed;
+      text-transform: uppercase;
+    }
+    button {
+      padding: 10px 40px;
+      font-family: "lexendMegaregular";
+      border-radius: 0;
+      background-color: $mainColor;
+      color: $textMainColor;
+      border: 2px solid $textMainColor;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 2s;
+    }
+    button:hover,
+    button:focus {
+      background-color: $mainColor;
+      border: 2px solid $textMainColor;
+      transition: 2s;
+    }
   }
   .backBlue {
     background-color: cadetblue;
     font-family: Arial, Helvetica, sans-serif;
   }
   .backRed {
-    background-color: red;
+    background-color: $darkRed;
     /*padding-top: 2px;*/
     font-family: Arial, Helvetica, sans-serif;
   }

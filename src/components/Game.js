@@ -5,32 +5,20 @@ import { useHistory } from "react-router-dom";
 import { PlayerAttributesStorage } from "./PlayerAttributesStorage";
 
 function Game() {
-  /*const playerInitialData = [
-    {
-      id: 1,
-      life: 100,
-      attack: 3,
-      speed: 1000,
-      dodge: 0,
-      accuracy: 0,
-      armor: 0,
-      vitality: 100,
-    },
-  ];*/
-
   //Monster Attributes
   const [monsterLvl] = useState(localStorage.getItem("monsterLvl"));
   const [monsterLife, setMonsterLife] = useState(monsters[monsterLvl].life);
   const [monsterLifePercentage, setMonsterLifePercentage] = useState(100);
   const [monsterDodge, setMonsterDodge] = useState(monsters[monsterLvl].dodge);
   const [monsterSpeed, setMonsterSpeed] = useState(monsters[monsterLvl].speed);
+  const [monsterName, setMonsterName] = useState(monsters[monsterLvl].name);
   const [monsteerDodgeChance, setMonsteerDodgeChance] = useState();
   const [monsterAttack, setMonsterAttack] = useState(
     monsters[monsterLvl].attack
   );
   const [monsterAttackAmount, setMonsterAttackAmount] = useState();
   const [monsterArmor, setMonsterArmor] = useState(monsters[monsterLvl].armor);
-  const [monsterAccuracity, setMonsterAccuracity] = useState(
+  const [monsterAccuracy, setMonsterAccuracy] = useState(
     monsters[monsterLvl].accuracy
   );
 
@@ -43,7 +31,7 @@ function Game() {
   const [playerLife, setPlayerLife] = useState(localStorage.getItem("life"));
   const [playerArmor] = useState(localStorage.getItem("armor"));
   const [playerDodge] = useState(localStorage.getItem("dodge"));
-  const [playerAccuracity] = useState(localStorage.getItem("accuracity"));
+  const [playerAccuracy] = useState(localStorage.getItem("Accuracy"));
 
   const [playerLifePercentage, setPlayerLifePercentage] = useState(100);
   const [playerAttackAmount, setPlayerAttackAmount] = useState();
@@ -60,8 +48,8 @@ function Game() {
   //Calculate monster doodge
   const calculateMonsterDodgechance = () => {
     let checkDifference;
-    if (playerAccuracity < monsterDodge) {
-      checkDifference = Math.abs(playerAccuracity - monsterDodge);
+    if (playerAccuracy < monsterDodge) {
+      checkDifference = Math.abs(playerAccuracy - monsterDodge);
     } else {
       checkDifference = 1;
     }
@@ -71,8 +59,8 @@ function Game() {
   //Calculate player doodge
   const calculatePlayerDodgechance = () => {
     let checkDifferencePlayer;
-    if (monsterAccuracity < playerDodge) {
-      checkDifferencePlayer = Math.abs(monsterAccuracity - playerDodge);
+    if (monsterAccuracy < playerDodge) {
+      checkDifferencePlayer = Math.abs(monsterAccuracy - playerDodge);
     } else {
       checkDifferencePlayer = 1;
     }
@@ -156,9 +144,15 @@ function Game() {
     localStorage.setItem("availableSkills", "3");
   }
 
+  function startAgain() {
+    history.push("/");
+    localStorage.clear();
+  }
+
   return (
     <div className="game">
       <div className="fractalMonster">
+        <div className="monsterName">{monsterName}</div>
         <div className="monsterAvatar">
           <img
             src={Neptune}
@@ -212,14 +206,14 @@ function Game() {
         }`}
       >
         <p>You lost!</p>
-        <button onClick={() => setStart(true)}>End Game</button>
+        <button onClick={() => startAgain()}>End Game</button>
       </div>
       <div
         className={`playerDefeated ${
           monsterLife <= 0 ? "displayEndButton" : "displayNone"
         }`}
       >
-        <p>Victory!</p>
+        <p className="victory">Victory!</p>
         <button onClick={() => goToNextFloor()}>Next</button>
       </div>
       <div className="player">
