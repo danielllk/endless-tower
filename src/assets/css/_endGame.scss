@@ -1,0 +1,42 @@
+.EndGame {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+  color: $textMainColor;
+  font-size: 30px;
+  div {
+    max-width: 600px;
+    button {
+      margin-top: 50px;
+      box-shadow: none;
+      padding: 10px 40px;
+      font-family: "lexendMegaregular";
+      border-radius: 0;
+      background-color: $mainColor;
+      color: #fff;
+      border: 2px solid $textMainColor;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: 2s;
+    }
+    button:hover,
+    button:focus {
+      background-color: $textMainColor;
+      border: 2px solid $textMainColor;
+      color: #000;
+      transition: 2s;
+    }
+    p:nth-child(2) {
+      font-size: 20px;
+    }
+    p:nth-child(3) {
+      font-size: 15px;
+      line-height: 2;
+      a {
+        color: $textMainColor;
+      }
+    }
+  }
+}

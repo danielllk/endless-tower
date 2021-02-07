@@ -6,13 +6,13 @@ function Rules() {
 
   const initialPlayerSkills = () => {
     localStorage.setItem("monsterLvl", "0");
-    localStorage.setItem("attack", "30");
-    localStorage.setItem("rawSpeed", "200");
-    localStorage.setItem("speed", "40");
+    localStorage.setItem("attack", "2");
+    localStorage.setItem("rawSpeed", "1000");
+    localStorage.setItem("speed", "0");
     localStorage.setItem("life", "100");
     localStorage.setItem("armor", "0");
     localStorage.setItem("dodge", "0");
-    localStorage.setItem("accuracy", "40");
+    localStorage.setItem("accuracy", "0");
     localStorage.setItem("vitality", "10");
     localStorage.setItem("agility", "0");
   };

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import monsters from "../data/monsters";
 import { useHistory } from "react-router-dom";
 import { PlayerAttributesStorage } from "./PlayerAttributesStorage";
+import playerAvatar from "../assets/img/playerAvatar/playerAvatar.png";
 
 function Game() {
   //Monster Attributes
@@ -140,8 +141,13 @@ function Game() {
   console.log(monsterLifePercentage);
 
   function goToNextFloor() {
-    history.push("/playerskills");
-    localStorage.setItem("availableSkills", "3");
+    console.log(monsterLvl);
+    if (monsterLvl >= 19) {
+      history.push("/endgame");
+    } else {
+      history.push("/playerskills");
+      localStorage.setItem("availableSkills", "3");
+    }
   }
 
   function startAgain() {
@@ -219,7 +225,7 @@ function Game() {
       <div className="player">
         <div className="playerAvatar">
           <img
-            src={monsters[monsterLvl].img}
+            src={playerAvatar}
             alt=""
             className={playerLife < 0 ? "defeated" : ""}
           />
