@@ -149,6 +149,9 @@
       color: $darkRed;
       text-transform: uppercase;
     }
+    p {
+      color: $mainColor;
+    }
     button {
       padding: 10px 40px;
       font-family: "lexendMegaregular";
@@ -210,4 +213,7 @@
       }
     }
   }
+}
+.game-change-back {
+  background-color: $mainColor;
 }

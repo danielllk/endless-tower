@@ -29,7 +29,7 @@ function PlayerSkills() {
     localStorage.getItem("speed")
   );
   const [playerAccuracy, setPlayerAccuracy] = PlayerAttributesStorage(
-    "Accuracy",
+    "accuracy",
     localStorage.getItem("Accuracy")
   );
   const [playerArmor, setPlayerArmor] = PlayerAttributesStorage(
@@ -98,7 +98,7 @@ function PlayerSkills() {
   };
 
   const handleSpeed = () => {
-    if (availableSkills > 0) {
+    if (availableSkills > 0 && playerSpeed !== 45) {
       setPlayerSpeed(parseInt(playerSpeed) + 1);
       setPlayerRawSpeed(parseInt(playerRawSpeed) - 20);
       setAvailableSkills(parseInt(availableSkills) - 1);
@@ -156,47 +156,136 @@ function PlayerSkills() {
 
   return (
     <div className="PlayerSkills">
-      <div>
+      <div className="skills-container">
         <p>You gain a New Level!</p>
-        <p>You have {availableSkills} skills avaliable </p>
-        <div>
+        <p>
+          You have <span className="skills-avaliable">{availableSkills}</span>{" "}
+          skills avaliable{" "}
+        </p>
+        <div className="skills-box">
           <div>
             <span>Strength: </span>
             <span> {playerAttack}</span>
-            <button onClick={() => handleAttackReturn()}>-</button>
-            <button onClick={() => handleAttack()}>+</button>
+            <span>
+              <button
+                className="btn-add-points"
+                onClick={() => handleAttackReturn()}
+              >
+                -
+              </button>
+              <button className="btn-add-points" onClick={() => handleAttack()}>
+                +
+              </button>
+            </span>
           </div>
+          <div className="skills-explain">Your attack points.</div>
           <div>
             <span>Vitality: </span>
             <span>{playerVitality}</span>
-            <button onClick={() => handleLifeReturn()}>-</button>
-            <button onClick={() => handleLife()}>+</button>
+            <span>
+              <button
+                className="btn-add-points"
+                onClick={() => handleLifeReturn()}
+              >
+                -
+              </button>
+              <button className="btn-add-points" onClick={() => handleLife()}>
+                +
+              </button>
+            </span>
+          </div>
+          <div className="skills-explain">
+            Your vitality points. 1 point - 10 lifes.
           </div>
           <div>
             <span>Agility: </span>
             <span>{playerAgility}</span>
-            <button onClick={() => handleAgilityReturn()}>-</button>
-            <button onClick={() => handleAgility()}>+</button>
+            <span>
+              <button
+                className="btn-add-points"
+                onClick={() => handleAgilityReturn()}
+              >
+                -
+              </button>
+              <button
+                className="btn-add-points"
+                onClick={() => handleAgility()}
+              >
+                +
+              </button>
+            </span>
           </div>
+          <div className="skills-explain">Your doge chance.</div>
           <div>
             <span>Speed: </span>
-            <span> {playerSpeed}</span>
-            <button onClick={() => handleSpeedReturn()}>-</button>
-            <button onClick={() => handleSpeed()}>+</button>
+            <span>
+              {" "}
+              {playerSpeed < 45 ? playerSpeed : playerSpeed + " (max)"}
+            </span>
+            <span>
+              <button
+                className="btn-add-points"
+                onClick={() => handleSpeedReturn()}
+              >
+                -
+              </button>
+              <button
+                className={`btn-add-points ${
+                  playerSpeed < 45 ? "" : "block-button"
+                }`}
+                onClick={() => handleSpeed()}
+              >
+                +
+              </button>
+            </span>
+          </div>
+          <div className="skills-explain">
+            Your speed. More speed - faster attacks.
           </div>
           <div>
             <span>Accuracy: </span>
             <span>{playerAccuracy}</span>
-            <button onClick={() => handleAccuracyReturn()}>-</button>
-            <button onClick={() => handleAccuracy()}>+</button>
+            <span>
+              <button
+                className="btn-add-points"
+                onClick={() => handleAccuracyReturn()}
+              >
+                -
+              </button>
+              <button
+                className="btn-add-points"
+                onClick={() => handleAccuracy()}
+              >
+                +
+              </button>
+            </span>
           </div>
+          <div className="skills-explain">Counter the agility skill.</div>
           <div>
             <span>Armor: </span>
             <span>{playerArmor}</span>
-            <button onClick={() => handleArmorReturn()}>-</button>
-            <button onClick={() => handleArmor()}>+</button>
+            <span>
+              <button
+                className="btn-add-points"
+                onClick={() => handleArmorReturn()}
+              >
+                -
+              </button>
+              <button className="btn-add-points" onClick={() => handleArmor()}>
+                +
+              </button>
+            </span>
           </div>
-          <button onClick={() => goNextStage()}>next stage</button>
+          <div className="skills-explain">
+            Counter the strength skill. But min damage recived - 1.
+          </div>
+          <div
+            className={`next-stage-btn ${
+              availableSkills === 0 ? "next-stage-active" : ""
+            }`}
+          >
+            <button onClick={() => goNextStage()}>next stage</button>
+          </div>
         </div>
       </div>
     </div>

@@ -157,11 +157,41 @@
   color: #fff;
 }
 
+.game .fractalMonster .monsterName {
+  padding: 5px;
+  text-transform: uppercase;
+}
+
+.game .startButton {
+  margin-top: 20px;
+}
+
+.game .startButton button {
+  padding: 10px 40px;
+  font-family: "lexendMegaregular";
+  border-radius: 0;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.game .startButton button:hover,
+.game .startButton button:focus {
+  background-color: #1a1a1a;
+  border: 2px solid #d9d9d9;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
 .game .player {
   width: 200px;
   height: 200px;
   text-align: center;
-  margin: 45px;
+  margin: 0px 45px 45px 45px;
 }
 
 .game .player .playerAvatar {
@@ -262,10 +292,14 @@
 }
 
 .game .playerDefeated .victory {
-  font-size: 35px;
+  /*font-size: 35px;*/
   font-family: "lexendMegaregular";
   color: #cc0000;
   text-transform: uppercase;
+}
+
+.game .playerDefeated p {
+  color: #1a1a1a;
 }
 
 .game .playerDefeated button {
@@ -283,7 +317,7 @@
 
 .game .playerDefeated button:hover,
 .game .playerDefeated button:focus {
-  background-color: #cc0000;
+  background-color: #1a1a1a;
   border: 2px solid #d9d9d9;
   -webkit-transition: 2s;
   transition: 2s;
@@ -370,8 +404,12 @@
   }
 }
 
+.game-change-back {
+  background-color: #1a1a1a;
+}
+
 .PlayerSkills {
-  background-color: red;
+  background-color: #1a1a1a;
   height: 100vh;
   display: -ms-grid;
   display: grid;
@@ -381,6 +419,98 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  color: #d9d9d9;
+}
+
+.PlayerSkills .skills-container {
+  padding: 50px 50px;
+  background-color: #404040;
+  border: 5px solid #666666;
+  min-width: 500px;
+}
+
+.PlayerSkills .skills-container p {
+  text-align: center;
+}
+
+.PlayerSkills .skills-container p:nth-child(2) {
+  min-width: 285px;
+}
+
+.PlayerSkills .skills-container .skills-avaliable {
+  color: #f2c462;
+  font-weight: bold;
+}
+
+.PlayerSkills .skills-container .skills-box {
+  margin-top: 50px;
+}
+
+.PlayerSkills .skills-container .skills-box div {
+  cursor: pointer;
+}
+
+.PlayerSkills .skills-container .skills-box div span:nth-child(2) {
+  color: #f2c462;
+}
+
+.PlayerSkills .skills-container .skills-box div span:nth-child(3) {
+  float: right;
+}
+
+.PlayerSkills .skills-container .skills-box div:hover {
+  opacity: 1;
+}
+
+.PlayerSkills .skills-container .skills-box .skills-explain {
+  padding: 5px 5px;
+  font-size: 10px;
+  opacity: 0;
+  max-width: 80%;
+}
+
+.PlayerSkills .skills-container .skills-box .btn-add-points {
+  padding: 5px 10px;
+  font-family: "lexendMegaregular";
+  border-radius: 0;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 2s;
+  transition: 2s;
+  margin-left: 10px;
+}
+
+.PlayerSkills .skills-container .next-stage-btn {
+  text-align: center;
+  margin-top: 50px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.PlayerSkills .skills-container .next-stage-btn button {
+  padding: 10px 40px;
+  font-family: "lexendMegaregular";
+  border-radius: 0;
+  background-color: #1a1a1a;
+  color: #d9d9d9;
+  border: 2px solid #d9d9d9;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: 2s;
+  transition: 2s;
+}
+
+.PlayerSkills .skills-container .next-stage-active {
+  opacity: 1;
+  pointer-events: initial;
+}
+
+.PlayerSkills .skills-container .block-button {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .NextStage {
@@ -399,6 +529,7 @@
 .NextStage p {
   font-size: 150px;
   text-transform: uppercase;
+  color: #d9d9d9;
 }
 
 @font-face {
@@ -511,6 +642,7 @@
 
 .rules .rules-box strong {
   text-transform: uppercase;
+  color: #f2c462;
 }
 
 body {
@@ -524,5 +656,6 @@ body .display-none {
 
 body a {
   color: #000;
+  font-weight: bold;
 }
 /*# sourceMappingURL=app.css.map */

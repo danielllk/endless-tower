@@ -6,13 +6,13 @@ function Rules() {
 
   const initialPlayerSkills = () => {
     localStorage.setItem("monsterLvl", "0");
-    localStorage.setItem("attack", "2");
-    localStorage.setItem("rawSpeed", "1000");
-    localStorage.setItem("speed", "10");
+    localStorage.setItem("attack", "30");
+    localStorage.setItem("rawSpeed", "200");
+    localStorage.setItem("speed", "40");
     localStorage.setItem("life", "100");
     localStorage.setItem("armor", "0");
     localStorage.setItem("dodge", "0");
-    localStorage.setItem("accuracy", "0");
+    localStorage.setItem("accuracy", "40");
     localStorage.setItem("vitality", "10");
     localStorage.setItem("agility", "0");
   };
@@ -61,16 +61,15 @@ function Rules() {
               Gameplay <span>{openGameplay ? "-" : "+"}</span>
             </div>
             <p className={`rules-text ${openGameplay ? "" : "display-none"}`}>
-              After pressing the start button you will be transferred to the
-              game screen. To start the fight press the "Fight" button. Each
-              second the game will compare your stats with the stats of the
-              enemy and show the result ( the speed can be changed through the
-              stats ). If your health goes to 0 - you will lose. If the health
-              of the enemy goes to 0 - you will win and move to the next screen.
-              On the next screen, you will be asked to Lvl up your skills. The
-              idea is to create a well-balanced character, who can fight against
-              any enemy. Aftherwards you will be moved to the next stage, and
-              the process repeats. 
+              Press the start button to start the game. To start the fight press
+              the "Fight" button. Each second the game will compare your stats
+              with the stats of the enemy and show the result. If your health
+              goes to 0 - you will lose. If the health of the enemy goes to 0 -
+              you will win and move to the next screen. On the next screen, you
+              will be asked to Lvl up your skills. The idea is to create a
+              well-balanced character, who can fight against any enemy.
+              Aftherwards you will be moved to the next stage, and the process
+              repeats. 
             </p>
           </div>
           <div>
@@ -123,20 +122,17 @@ function Rules() {
             </div>
             <p className={`rules-text ${openAbout ? "" : "display-none"}`}>
               Hi! My name is Daniel, I am front end developer, musician and
-              abstract artist. Endless Tower Of Fracta is a simple IDLE RPG
-              where you watch numbers go down and try to climb to the highest
-              floor.
+              abstract artist. The Tower Of Fracta is a simple IDLE RPG where
+              you watch numbers go down and try to climb to the highest floor.
               <p>
-                If you are interested in fractals which I used in this project
-                you can check my website
+                If you are interested in fractals you can check my website{" "}
                 <a href="https://fractaart.com" target="_blank">
                   here
                 </a>
                 .
               </p>
               <p>
-                You can also contact me if you need any info or just want to
-                talk:{" "}
+                You can also contact me if you need more info:{" "}
                 <a href="mailto:daniel@fractaart.com" target="_blank">
                   daniel@fractaart.com
                 </a>

@@ -1,11 +1,29 @@
-import neptuneImg from "../../src/assets/img/monstersAvatars/Neptune.png";
-
+import boreasImg from "../../src/assets/img/monstersAvatars/Boreas.png";
+import cyreneImg from "../../src/assets/img/monstersAvatars/cyrene.png";
+import agamemnonImg from "../../src/assets/img/monstersAvatars/agamemnon.png";
+import artemisImg from "../../src/assets/img/monstersAvatars/artemis.png";
+import bloodStarImg from "../../src/assets/img/monstersAvatars/blood-star.png";
+import cernunnosImg from "../../src/assets/img/monstersAvatars/cernunnos.png";
+import doomImg from "../../src/assets/img/monstersAvatars/doom.png";
+import dryadImg from "../../src/assets/img/monstersAvatars/dryad.png";
+import enigmaImg from "../../src/assets/img/monstersAvatars/enigma.png";
+import fractalBirdImg from "../../src/assets/img/monstersAvatars/fractal-bird.png";
+import fractalBuilderImg from "../../src/assets/img/monstersAvatars/fractal-builder.png";
+import fraFlowerImg from "../../src/assets/img/monstersAvatars/fra-flower.png";
+import janusImg from "../../src/assets/img/monstersAvatars/janus.png";
+import juggernautImg from "../../src/assets/img/monstersAvatars/juggernaut.png";
+import metonImg from "../../src/assets/img/monstersAvatars/meton.png";
+import neonParadoxImg from "../../src/assets/img/monstersAvatars/neon-paradox.png";
+import newFormImg from "../../src/assets/img/monstersAvatars/new-form.png";
+import orionImg from "../../src/assets/img/monstersAvatars/orion.png";
+import vesaniaImg from "../../src/assets/img/monstersAvatars/vesania.png";
+import achlysImg from "../../src/assets/img/monstersAvatars/achlys.png";
 const monsters = [
   {
     id: 1,
-    name: "Neptune",
+    name: "Cyrene",
     life: 100,
-    img: neptuneImg,
+    img: cyreneImg,
     attack: 1,
     speed: 1000,
     dodge: 0,
@@ -14,9 +32,9 @@ const monsters = [
   },
   {
     id: 2,
-    name: "Neptune2",
+    name: "Boreas",
     life: 120,
-    img: neptuneImg,
+    img: boreasImg,
     attack: 2,
     speed: 1000,
     dodge: 0,
@@ -26,9 +44,9 @@ const monsters = [
   },
   {
     id: 3,
-    name: "Neptune3",
+    name: "Achlys",
     life: 100,
-    img: neptuneImg,
+    img: achlysImg,
     attack: 4,
     speed: 1000,
     dodge: 3,
@@ -38,9 +56,9 @@ const monsters = [
   },
   {
     id: 4,
-    name: "Neptune4",
+    name: "Orion",
     life: 180,
-    img: neptuneImg,
+    img: orionImg,
     attack: 2,
     speed: 1000,
     dodge: 0,
@@ -50,9 +68,9 @@ const monsters = [
   },
   {
     id: 5,
-    name: "Neptune5",
+    name: "Janus",
     life: 100,
-    img: neptuneImg,
+    img: janusImg,
     attack: 8,
     speed: 1000,
     dodge: 5,
@@ -62,9 +80,9 @@ const monsters = [
   },
   {
     id: 6,
-    name: "Neptune6",
+    name: "Fra Flower",
     life: 100,
-    img: neptuneImg,
+    img: fraFlowerImg,
     attack: 16,
     speed: 1000,
     dodge: 0,
@@ -74,9 +92,9 @@ const monsters = [
   },
   {
     id: 7,
-    name: "Neptune7",
+    name: "Cernunnos",
     life: 150,
-    img: neptuneImg,
+    img: cernunnosImg,
     attack: 6,
     speed: 1000,
     dodge: 3,
@@ -86,9 +104,9 @@ const monsters = [
   },
   {
     id: 8,
-    name: "Neptune8",
+    name: "Enigma",
     life: 200,
-    img: neptuneImg,
+    img: enigmaImg,
     attack: 6,
     speed: 1000,
     dodge: 3,
@@ -98,9 +116,9 @@ const monsters = [
   },
   {
     id: 9,
-    name: "Neptune9",
+    name: "Artemis",
     life: 150,
-    img: neptuneImg,
+    img: artemisImg,
     attack: 6,
     speed: 800,
     dodge: 0,
@@ -110,9 +128,9 @@ const monsters = [
   },
   {
     id: 10,
-    name: "Neptune10",
+    name: "Juggernaut",
     life: 170,
-    img: neptuneImg,
+    img: juggernautImg,
     attack: 8,
     speed: 1000,
     dodge: 7,
@@ -122,9 +140,9 @@ const monsters = [
   },
   {
     id: 11,
-    name: "Neptune11",
+    name: "Meton",
     life: 100,
-    img: neptuneImg,
+    img: metonImg,
     attack: 10,
     speed: 600,
     dodge: 0,
@@ -134,9 +152,9 @@ const monsters = [
   },
   {
     id: 12,
-    name: "Neptune12",
+    name: "Vesania",
     life: 140,
-    img: neptuneImg,
+    img: vesaniaImg,
     attack: 30,
     speed: 1000,
     dodge: 0,
@@ -146,9 +164,9 @@ const monsters = [
   },
   {
     id: 13,
-    name: "Neptune13",
+    name: "Fractal Builder",
     life: 160,
-    img: neptuneImg,
+    img: fractalBuilderImg,
     attack: 10,
     speed: 1000,
     dodge: 10,
@@ -158,9 +176,9 @@ const monsters = [
   },
   {
     id: 14,
-    name: "Neptune14",
+    name: "Agamemnon",
     life: 200,
-    img: neptuneImg,
+    img: agamemnonImg,
     attack: 20,
     speed: 1000,
     dodge: 9,
@@ -170,9 +188,9 @@ const monsters = [
   },
   {
     id: 15,
-    name: "Neptune15",
+    name: "Dryad",
     life: 220,
-    img: neptuneImg,
+    img: dryadImg,
     attack: 20,
     speed: 1000,
     dodge: 0,
@@ -182,9 +200,9 @@ const monsters = [
   },
   {
     id: 16,
-    name: "Neptune16",
+    name: "Fractal Bird",
     life: 150,
-    img: neptuneImg,
+    img: fractalBirdImg,
     attack: 15,
     speed: 1000,
     dodge: 0,
@@ -194,9 +212,9 @@ const monsters = [
   },
   {
     id: 17,
-    name: "Neptune17",
+    name: "Doom",
     life: 200,
-    img: neptuneImg,
+    img: doomImg,
     attack: 10,
     speed: 1000,
     dodge: 18,
@@ -206,15 +224,39 @@ const monsters = [
   },
   {
     id: 18,
-    name: "Neptune18",
+    name: "Blood Star",
     life: 110,
-    img: neptuneImg,
+    img: bloodStarImg,
     attack: 20,
     speed: 1000,
     dodge: 0,
     accuracy: 30,
     armor: 0,
     points: 51,
+  },
+  {
+    id: 19,
+    name: "Neon Paradox",
+    life: 100,
+    img: neonParadoxImg,
+    attack: 45,
+    speed: 1000,
+    dodge: 10,
+    accuracy: 0,
+    armor: 0,
+    points: 54,
+  },
+  {
+    id: 20,
+    name: "New Form",
+    life: 300,
+    img: newFormImg,
+    attack: 11,
+    speed: 1000,
+    dodge: 4,
+    accuracy: 20,
+    armor: 0,
+    points: 54,
   },
 ];
 

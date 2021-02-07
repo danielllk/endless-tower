@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import Neptune from "../assets/img/monstersAvatars/Neptune.png";
 import monsters from "../data/monsters";
 import { useHistory } from "react-router-dom";
 import { PlayerAttributesStorage } from "./PlayerAttributesStorage";
@@ -31,7 +30,7 @@ function Game() {
   const [playerLife, setPlayerLife] = useState(localStorage.getItem("life"));
   const [playerArmor] = useState(localStorage.getItem("armor"));
   const [playerDodge] = useState(localStorage.getItem("dodge"));
-  const [playerAccuracy] = useState(localStorage.getItem("Accuracy"));
+  const [playerAccuracy] = useState(localStorage.getItem("accuracy"));
 
   const [playerLifePercentage, setPlayerLifePercentage] = useState(100);
   const [playerAttackAmount, setPlayerAttackAmount] = useState();
@@ -51,9 +50,10 @@ function Game() {
     if (playerAccuracy < monsterDodge) {
       checkDifference = Math.abs(playerAccuracy - monsterDodge);
     } else {
-      checkDifference = 1;
+      checkDifference = 0;
     }
     let dodgeChance = Math.floor(Math.random() * checkDifference);
+    console.log("doodge chance ", dodgeChance);
     setMonsteerDodgeChance(dodgeChance);
   };
   //Calculate player doodge
@@ -62,16 +62,16 @@ function Game() {
     if (monsterAccuracy < playerDodge) {
       checkDifferencePlayer = Math.abs(monsterAccuracy - playerDodge);
     } else {
-      checkDifferencePlayer = 1;
+      checkDifferencePlayer = 0;
     }
     let dodgeChancePlayer = Math.floor(Math.random() * checkDifferencePlayer);
     setPlayerDodgeChance(dodgeChancePlayer);
   };
 
-  console.log("player" + playerDodgeChance);
+  /*console.log("player" + playerDodgeChance);
   console.log("monster attack " + monsterAttack);
   console.log("player doodge" + playerDodgeChance);
-  console.log("player life" + playerLife);
+  console.log("player life" + playerLife);*/
 
   //Calculate damage to monster
   useEffect(() => {
@@ -155,7 +155,7 @@ function Game() {
         <div className="monsterName">{monsterName}</div>
         <div className="monsterAvatar">
           <img
-            src={Neptune}
+            src={monsters[monsterLvl].img}
             className={monsterLife < 0 ? "defeated" : ""}
             alt=""
           />
@@ -219,7 +219,7 @@ function Game() {
       <div className="player">
         <div className="playerAvatar">
           <img
-            src={Neptune}
+            src={monsters[monsterLvl].img}
             alt=""
             className={playerLife < 0 ? "defeated" : ""}
           />
