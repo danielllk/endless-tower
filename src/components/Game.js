@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import monsters from "../data/monsters";
 import { useHistory } from "react-router-dom";
-import { PlayerAttributesStorage } from "./PlayerAttributesStorage";
 import playerAvatar from "../assets/img/playerAvatar/playerAvatar.png";
 
 function Game() {
@@ -9,23 +8,17 @@ function Game() {
   const [monsterLvl] = useState(localStorage.getItem("monsterLvl"));
   const [monsterLife, setMonsterLife] = useState(monsters[monsterLvl].life);
   const [monsterLifePercentage, setMonsterLifePercentage] = useState(100);
-  const [monsterDodge, setMonsterDodge] = useState(monsters[monsterLvl].dodge);
-  const [monsterSpeed, setMonsterSpeed] = useState(monsters[monsterLvl].speed);
-  const [monsterName, setMonsterName] = useState(monsters[monsterLvl].name);
+  const [monsterDodge] = useState(monsters[monsterLvl].dodge);
+  const [monsterSpeed] = useState(monsters[monsterLvl].speed);
+  const [monsterName] = useState(monsters[monsterLvl].name);
   const [monsteerDodgeChance, setMonsteerDodgeChance] = useState();
-  const [monsterAttack, setMonsterAttack] = useState(
-    monsters[monsterLvl].attack
-  );
+  const [monsterAttack] = useState(monsters[monsterLvl].attack);
   const [monsterAttackAmount, setMonsterAttackAmount] = useState();
-  const [monsterArmor, setMonsterArmor] = useState(monsters[monsterLvl].armor);
-  const [monsterAccuracy, setMonsterAccuracy] = useState(
-    monsters[monsterLvl].accuracy
-  );
+  const [monsterArmor] = useState(monsters[monsterLvl].armor);
+  const [monsterAccuracy] = useState(monsters[monsterLvl].accuracy);
 
   //Player Attributes
-  const [playerAttack, setPlayerAttack] = useState(
-    localStorage.getItem("attack")
-  );
+  const [playerAttack] = useState(localStorage.getItem("attack"));
   console.log(localStorage);
   const [playerSpeed] = useState(localStorage.getItem("rawSpeed"));
   const [playerLife, setPlayerLife] = useState(localStorage.getItem("life"));
