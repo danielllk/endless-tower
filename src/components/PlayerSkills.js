@@ -20,6 +20,10 @@ function PlayerSkills() {
     "vitality",
     localStorage.getItem("vitality")
   );
+  const [playerLife, setPlayerLife] = PlayerAttributesStorage(
+    "life",
+    localStorage.getItem("life")
+  );
   const [playerRawSpeed, setPlayerRawSpeed] = PlayerAttributesStorage(
     "rawSpeed",
     localStorage.getItem("rawSpeed")
@@ -44,7 +48,6 @@ function PlayerSkills() {
     "monsterLvl",
     localStorage.getItem("monsterLvl")
   );
-  const [nextStageDelay, setNextStageDelay] = useState(false);
   console.log(localStorage);
 
   const handleAttack = () => {
@@ -66,6 +69,7 @@ function PlayerSkills() {
   const handleLife = () => {
     if (availableSkills > 0) {
       setPlayerVitality(parseInt(playerVitality) + 1);
+      setPlayerLife(parseInt(playerLife) + 10);
       setAvailableSkills(parseInt(availableSkills) - 1);
     }
   };

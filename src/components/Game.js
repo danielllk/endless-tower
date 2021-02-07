@@ -33,9 +33,6 @@ function Game() {
   //Start the Game
   const [start, setStart] = useState(false);
 
-  //restore life to player
-  localStorage.setItem("life", localStorage.getItem("vitality") * 10);
-
   let history = useHistory();
 
   //Calculate monster doodge
