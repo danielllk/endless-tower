@@ -2,13 +2,15 @@
 
 This is an example of a simple idle rpg made with react
 
-# Demo
+## Demo
 
-# To start the project locally
+https://gracious-heisenberg-b0a04e.netlify.app/
+
+## To start the project locally
 
 npm start
 
-# Gameplay
+## Gameplay
 
 Press the start button to start the game. To start the fight press
 the "Fight" button. Each second the game will compare your stats
@@ -20,11 +22,11 @@ well-balanced character, who can fight against any enemy.
 Aftherwards you will be moved to the next stage, and the process
 repeats.
 
-# Version
+## Version
 
 1.0
 
-# To do
+## To do
 
 1. Make the game responsive
 2. Add perk tree
@@ -33,6 +35,9 @@ repeats.
 5. Fix some balance issues with dodge
 6. Fix life bar bug
 7. Fix attack number box
+8. Add player avatars
+9. Add leaderboard
+10. Fix monster avatar loading
 
 # Fractals
 
