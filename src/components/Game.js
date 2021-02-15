@@ -206,7 +206,9 @@ function Game() {
       </div>
       <div
         className={`playerDefeated ${
-          monsterLife <= 0 ? "displayEndButton" : "displayNone"
+          monsterLife <= 0 && playerLife >= 1
+            ? "displayEndButton"
+            : "displayNone"
         }`}
       >
         <p className="victory">Victory!</p>
