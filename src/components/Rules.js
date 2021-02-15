@@ -6,7 +6,7 @@ function Rules() {
 
   const initialPlayerSkills = () => {
     localStorage.setItem("monsterLvl", "0");
-    localStorage.setItem("attack", "2");
+    localStorage.setItem("attack", "12");
     localStorage.setItem("rawSpeed", "1000");
     localStorage.setItem("speed", "0");
     localStorage.setItem("life", "100");
@@ -132,7 +132,7 @@ function Rules() {
                 .
               </p>
               <p>
-                You can also contact me if you need more info:{" "}
+                Don't hesitate to contact me via email:{" "}
                 <a href="mailto:daniel@fractaart.com" target="_blank">
                   daniel@fractaart.com
                 </a>

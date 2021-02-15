@@ -13,8 +13,8 @@ function EndGame() {
         <p>Congratulations!</p>
         <p>You finished the Game!</p>
         <p>
-          P.S. The game is still in development. If I will have enough time I
-          will continue adding more features. Feel free to contact me:{" "}
+          P.S. The game is still in development. If I have enough time I will
+          add more features. Feel free to contact me:{" "}
           <a href="mailto:daniel@fractaart.com">daniel@fractaart.com</a>
         </p>
         <button type="button" onClick={goToStart}>
